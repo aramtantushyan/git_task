@@ -1,12 +1,22 @@
-function getRandomNumber () {
-    return Math.random();
+function getRandomLetter () {
+    let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+    let num = Math.round(Math.random() * characters.length);
+    return characters[num];
 }
 
-function generateBinaryNumbers () {
-    let id = '';
+function choosePuppyNamebyThreeRandomLetter () {
+    let randomLetters = [];
     for (let i = 0; i < 3; i++) {
-        id += Math.round(getRandomNumber());
+        randomLetters.push(getRandomLetter());
     }
-    return id;
+    return randomLetters.toString();
+}
+
+function generatePassword () {
+    let password = '';
+    for (let i = 0; i < 10; i ++){
+        password += getRandomLetter();
+    }
+    return password;
 }
 

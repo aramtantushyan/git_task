@@ -1,21 +1,11 @@
-function getRandomLetter () {
-    let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
-    let num = Math.round(Math.random() * characters.length);
-    return characters[num];
+function getRandomNumber () {
+    return Math.random();
 }
 
-function choosePuppyNamebyThreeRandomLetter () {
-    let randomLetters = [];
+function generateBinaryNumbers () {
+    let id = '';
     for (let i = 0; i < 3; i++) {
-        randomLetters.push(getRandomLetter());
+        id += Math.round(getRandomNumber());
     }
-    return randomLetters.toString();
-}
-
-function generatePassword () {
-    let password = '';
-    for (let i = 0; i < 10; i ++){
-        password += getRandomLetter();
-    }
-    return password;
+    return id;
 }
